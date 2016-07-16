@@ -80,7 +80,7 @@
                   <div class="checkbox">
                     <label><input type="checkbox" id="fotos">Somente com fotos</label>
                   </div><br>
-                    <button type="button" class="btn btn-primary btn-md">Pesquisar</button>    
+                    <button type="button" class="btn btn-primary btn-md">Pesquisar Imóvel</button>    
                 </form>
 
             </div>

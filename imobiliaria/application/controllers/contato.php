@@ -9,7 +9,7 @@ class Contato extends CI_Controller {
 	public function index(){
 					
 		$dados_header = array(
-			'titulo' => 'Alexandre Monteiro ImÃ³veis - Fale Conosco',
+			'titulo' => 'DSW3 Imoveis - Fale Conosco',
 			'descricao' => 'Fale conosco.',
 			'palavras_chave' => 'Contato, fale conosco, atendimento'	
 		);
@@ -41,13 +41,23 @@ class Contato extends CI_Controller {
 			$mensagem = $this->load->view('mensagem',$dados,TRUE);			
 			
 			$this->load->library('email');
-			$this->email->set_newline("\r\n");
-			$this->email->initialize();
-			//$this->email->from($this->input->post('email'), $this->input->post('nome'));
+                        
+                        $config["protocol"] = "smtp";
+                        $config["smtp_host"] = "ssl://smtp.gmail.com";
+                        $config["smtp_user"] = "fdesiqueira.ti@gmail.com";
+                        $config["smtp_pass"] = "fe150112";
+                        $config["charset"] = "utf-8";
+                        $config["mailtype"] = "html";
+                        $config["newline"] = "\r\n";
+                        $config["smtp_port"] = '465';
+                        
+                        $this->email->initialize($config);
+			
+                        $this->email->set_newline("\r\n");
+			
                         $this->email->from('admin@dsw3.com.br', 'Contato Imobiliaria');
-			$this->email->to('admin@dsw3.com.br'); 
-
-			$this->email->subject('Mensagem encaminhada pelo website por:' . $this->input->post('nome'));
+			$this->email->to('dsw3.imoveis@gmail.com'); 
+			$this->email->subject('DSW3 Imoveis - Contato feito por:' . $this->input->post('nome'));
 			$this->email->message($mensagem);
 
 			if($this->email->send()){
@@ -61,22 +71,22 @@ class Contato extends CI_Controller {
 
 	public function sucesso(){		
 		$dados_header = array(
-			'titulo' => 'Alexandre Monteiro Imoveis - Mensagem encaminhada com sucesso',
+			'titulo' => 'DSW3 Imoveis - Mensagem encaminhada com sucesso',
 			'descricao' => 'Fale conosco.',
 			'palavras_chave' => 'Contato, fale conosco, atendimento'	
 		);
-		$dados_cabecalho               = array('titulo_h2' => 'Obrigado pelo contato. Retornaremos sua mensagem em breve.');		
+		$dados["mensagem"] = 'Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.';		
 								
       	        $this->load->view('html_header');
 		$this->load->view('cabecalho');
-		$this->load->view('contato_sucesso');
+		$this->load->view('contato_sucesso',  $dados);
 		$this->load->view('rodape');
 		$this->load->view('html_footer');
 	}
 	
 	public function falha(){		
 		$dados_header = array(
-			'titulo' => 'Alexandre Monteiro Imoveis - Fale Conosco',
+			'titulo' => 'DSW3 Imoveis - Fale Conosco',
 			'descricao' => 'Fale conosco.',
 			'palavras_chave' => 'Contato, fale conosco, atendimento'	
 		);

@@ -3,7 +3,7 @@
 <footer>
     <div class="row">
         <div class="col-md-12">
-            <p class="text-center">Copyright &copy; Alexandre Monteiro Imóveis 2016 - Esta página levou <?php echo $this->benchmark->elapsed_time();?> segundos para ser gerada.</p>
+            <p class="text-center">Copyright &copy; DSW3 Imóveis 2016 - Esta página levou <?php echo $this->benchmark->elapsed_time();?> segundos para ser gerada.</p>
         </div>
     </div>
 </footer>

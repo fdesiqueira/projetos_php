@@ -16,7 +16,7 @@
                 <div class="panel-body">
                     <!--Inserir formulário de login aqui -->
 		    <?php
-                    echo form_open(base_url().'administracao/home/login') .
+                    echo form_open(base_url().'administracao/login/autenticar') .
                         "<span class='validacoes'>" . validation_errors() . "</span>".                           
                         "<fieldset>" .
                             "<div class='form-group'>" .

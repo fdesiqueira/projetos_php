@@ -38,41 +38,59 @@
 |
 */
 
-$route['default_controller']                         = "home";
-$route['sobre']                                     = "home/sobre";
-$route['contato']                                   = "contato/index";
-$route['imoveis/consultar_por_categoria/(:any)']     = "imoveis/consultar_por_categoria/$1";
+$route['default_controller']                       = "home";
+$route['sobre']                                    = "home/sobre";
+$route['contato']                                  = "contato/index";
+$route['imoveis/consultar_por_categoria/(:any)']   = "imoveis/consultar_por_categoria/$1";
+$route['imoveis/agendar_visita/(:any)']            = "imoveis/agendar_visita/$1";
 
-$route['administracao/categorias/cadastrar/(:any)']  = "administracao/categorias/cadastrar/$1";
-$route['administracao/categorias/adicionar/(:any)']  = "administracao/categorias/salvar_inclusao/$1";
-$route['administracao/categorias/excluir/(:any)']    = "administracao/categorias/excluir/$1";
-$route['administracao/categorias/editar/(:any)']     = "administracao/categorias/editar/$1";
-$route['administracao/categorias/consultar/(:any)']  = "administracao/categorias/consultar/$1";
-$route['administracao/categorias/(:any)']            = "administracao/categorias/index/$1";
+$route['administracao/home/(:any)']                = "administracao/home/$1";
+$route['administracao/home/painel/(:any)']         = "administracao/home/painel/$1";
 
-$route['administracao/clientes/cadastrar/(:any)']    = "administracao/clientes/cadastrar/$1";
-$route['administracao/clientes/adicionar/(:any)']    = "administracao/clientes/salvar_inclusao/$1";
-$route['administracao/clientes/excluir/(:any)']      = "administracao/clientes/excluir/$1";
-$route['administracao/clientes/editar/(:any)']       = "administracao/clientes/editar/$1";
-$route['administracao/clientes/consultar/(:any)']    = "administracao/clientes/consultar/$1";
-$route['administracao/clientes/(:any)']              = "administracao/clientes/index/$1";
+$route['administracao/login/autenticar']           = "administracao/login/autenticar";
+$route['administracao/login/encerrar_sessao']      = "administracao/login/encerrar_sessao";
 
-$route['administracao/imoveis/cadastrar/(:any)']     = "administracao/imoveis/cadastrar/$1";
-$route['administracao/imoveis/adicionar/(:any)']     = "administracao/imoveis/salvar_inclusao/$1";
-$route['administracao/imoveis/excluir/(:any)']       = "administracao/imoveis/excluir/$1";
-$route['administracao/imoveis/editar/(:any)']        = "administracao/imoveis/editar/$1";
-$route['administracao/imoveis/consultar/(:any)']     = "administracao/imoveis/consultar/$1";
-$route['administracao/imoveis/fotos/(:any)'] 	     = "administracao/imoveis/fotos/$1";
-$route['administracao/imoveis/salvar_foto/(:any)']  = "administracao/imoveis/salvar_foto/$1";
-$route['administracao/imoveis/excluir_foto/(:any)']  = "administracao/imoveis/excluir_foto/$1/$2";
-$route['administracao/imoveis/(:any)']              = "administracao/imoveis/index/$1";
+$route['administracao/categorias/cadastrar/(:any)']        = "administracao/categorias/cadastrar/$1";
+$route['administracao/categorias/adicionar/(:any)']        = "administracao/categorias/salvar_inclusao/$1";
+$route['administracao/categorias/excluir/(:any)']          = "administracao/categorias/excluir/$1";
+$route['administracao/categorias/editar/(:any)']           = "administracao/categorias/editar/$1";
+$route['administracao/categorias/salvar_alteracao/(:any)'] = "administracao/categorias/salvar_alteracao/$1";
+$route['administracao/categorias/consultar/(:any)']        = "administracao/categorias/consultar/$1";
+$route['administracao/categorias/(:any)']                  = "administracao/categorias/index/$1";
 
-$route['administracao/usuarios/cadastrar/(:any)']    = "administracao/usuarios/cadastrar/$1";
-$route['administracao/usuarios/adicionar/(:any)']    = "administracao/usuarios/salvar_inclusao/$1";
-$route['administracao/usuarios/excluir/(:any)']      = "administracao/usuarios/excluir/$1";
-$route['administracao/usuarios/editar/(:any)']       = "administracao/usuarios/editar/$1";
-$route['administracao/usuarios/consultar/(:any)']    = "administracao/usuarios/consultar/$1";
-$route['administracao/usuarios/(:any)']   	      = "administracao/usuarios/index/$1";
+$route['administracao/clientes/cadastrar/(:any)']        = "administracao/clientes/cadastrar/$1";
+$route['administracao/clientes/adicionar/(:any)']        = "administracao/clientes/salvar_inclusao/$1";
+$route['administracao/clientes/excluir/(:any)']          = "administracao/clientes/excluir/$1";
+$route['administracao/clientes/editar/(:any)']           = "administracao/clientes/editar/$1";
+$route['administracao/clientes/salvar_alteracao/(:any)'] = "administracao/clientes/salvar_alteracao/$1";
+$route['administracao/clientes/consultar/(:any)']        = "administracao/clientes/consultar/$1";
+$route['administracao/clientes/(:any)']                  = "administracao/clientes/index/$1";
+
+$route['administracao/imoveis/cadastrar/(:any)']                = "administracao/imoveis/cadastrar/$1";
+$route['administracao/imoveis/adicionar/(:any)']                = "administracao/imoveis/salvar_inclusao/$1";
+$route['administracao/imoveis/excluir/(:any)']                  = "administracao/imoveis/excluir/$1";
+$route['administracao/imoveis/editar/(:any)']                   = "administracao/imoveis/editar/$1";
+$route['administracao/imoveis/salvar_alteracao/(:any)']         = "administracao/imoveis/salvar_alteracao/$1";
+$route['administracao/imoveis/consultar/(:any)']                = "administracao/imoveis/consultar/$1";
+$route['administracao/imoveis/fotos/(:any)'] 	                = "administracao/imoveis/fotos/$1";
+$route['administracao/imoveis/salvar_foto/(:any)']              = "administracao/imoveis/salvar_foto/$1";
+$route['administracao/imoveis/excluir_foto/(:any)']             = "administracao/imoveis/excluir_foto/$1/$2";
+$route['administracao/imoveis/reservar_imovel/(:any)']          = "administracao/imoveis/reservar_imovel/$1";
+$route['administracao/imoveis/salvar_reserva_imovel/(:any)']    = "administracao/imoveis/salvar_reserva_imovel/$1";
+$route['administracao/imoveis/emitir_autorizacao_venda/(:any)'] = "administracao/imoveis/emitir_autorizacao_venda/$1";
+$route['administracao/imoveis/autorizar_venda/(:any)']          = "administracao/imoveis/autorizar_venda/$1";
+$route['administracao/imoveis/(:any)']                          = "administracao/imoveis/index/$1";
+
+$route['administracao/usuarios/adicionar']               = "administracao/usuarios/adicionar";
+$route['administracao/usuarios/excluir/(:any)']          = "administracao/usuarios/excluir/$1";
+$route['administracao/usuarios/editar/(:any)']           = "administracao/usuarios/editar/$1";
+$route['administracao/usuarios/salvar_alteracao/(:any)'] = "administracao/usuarios/salvar_alteracao/$1";
+$route['administracao/usuarios/consultar/(:any)']        = "administracao/usuarios/consultar/$1";
+$route['administracao/usuarios/(:any)']   	         = "administracao/usuarios/index/$1";
+
+$route['visitas/agendar_visita/(:any)']                  = "visitas/agendar_visita/$1";
+$route['visitas/cadastrar_visita/(:any)']                = "visitas/cadastrar_visita/$1";
+$route['administracao/visitas/remarcar_visita/(:any)']   = "administracao/visitas/remarcar_visita/$1";
 
 $route['404_override'] = '';
 

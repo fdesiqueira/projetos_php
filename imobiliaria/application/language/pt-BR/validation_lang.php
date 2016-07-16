@@ -1,6 +1,7 @@
 <?php
 
 $lang['required'] = 'O campo %s é obrigatório.';
+$lang['is_unique']= "O campo %s deve conter um valor único.";
 $lang['isset'] = 'O campo %s deve ter algum valor.';
 $lang['valid_email'] = 'O campo %s deve conter um endereço de e-mail válido.';
 $lang['valid_emails'] = 'O campo %s deve conter todos os endereços de e-mail válidos.';

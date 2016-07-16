@@ -48,11 +48,11 @@
                         <?php
                             echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
                             echo "   <div class='thumbnail'>";
-                            echo "      <img class='img-responsive img-thumbnail' height='320px' width='150px' src='".base_url().$oportunidade->foto."' alt='".$oportunidade->desc_imovel."'>";
+                            echo "      <img class='img-responsive img-thumbnail' height='320px' width='150px' src='".base_url().$oportunidade->foto."' alt='".$oportunidade->categoria."'>";
                             echo "      <div class='caption'>";
-                            echo "          <h4 class='pull-right'>".reais($oportunidade->vlr_imovel)."</h4>";
-                            echo "          <h4><a href='#'>". word_limiter($oportunidade->desc_imovel,20)."</a></h4>";
-                            echo "          <p>".$oportunidade->desc_imovel."</p>";
+                            echo "          <p>".$oportunidade->desc_categoria." no bairro ".$oportunidade->nome."</p>";
+                            echo "          <p>".word_limiter($oportunidade->desc_imovel, 120)."</p>";
+                            echo "          <p class='pull-right'><b>".reais($oportunidade->vlr_imovel)."</b></p>";
                             echo "      </div>";
                             echo "   </div>";
                             echo "</div>";

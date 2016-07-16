@@ -13,9 +13,14 @@ class Home extends CI_Controller {
 		$this->db->where('in_destaque', 1);            
                 $data['destaques'] = $this->db->get('imoveis', 5)->result(); 
             
+                $this->db->select('categorias.desc_categoria, bairros.nome, imoveis.*');
+		$this->db->from('imoveis');
+		$this->db->join('categorias', 'categorias.id_categoria = imoveis.categoria');		
+                $this->db->join('bairros',    'bairros.id_bairro       = imoveis.id_bairro');		
+					
                 $this->db->order_by('id_imovel','random');
 		$this->db->where('in_oportunidade', 1);            
-                $data['oportunidade'] = $this->db->get('imoveis', 6)->result();
+                $data['oportunidade'] = $this->db->get()->result();
                 
 		$this->load->view('html_header');
 		$this->load->view('cabecalho');

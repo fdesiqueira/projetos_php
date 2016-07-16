@@ -23,7 +23,7 @@ body{background-position:top;height:auto;padding:0px;margin:0px;padding-bottom: 
 .formcadastros input[type=submit],.formcadastros input[type=button]{padding: 4px;width: 150px;margin-bottom: 5px;border:#ccc solid 2px;-moz-border-radius: 4px;-webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);}
 .formcadastros input[type=submit]:hover, .formcadastros input[type=button]:hover{background-color: #baefb8;}
 .file{width: 100%;}
-.divisor{background-color:#EFEFEF;padding-right:20px;font-size: 16px;text-transform:uppercase;font-weight:lighter;height:34px;line-height:34px;text-align: left;margin-bottom: 0px;padding-bottom:0px;width:300px; margin-top: 35px}
+.divisor{background-color:#EFEFEF;padding-right:25px;font-size: 16px;text-transform:uppercase;font-weight:lighter;height:34px;line-height:34px;text-align: left;margin-bottom: 0px;padding-bottom:0px;width:500px; margin-top: 35px}
 .divisor img{vertical-align: middle;}
 .wraper_table table{width:100%; border-top:#bbb solid 1px;border-left:#bbb solid 1px;-webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);}
 .wraper_table a{text-decoration: none;}
@@ -56,3 +56,4 @@ body{background-position:top;height:auto;padding:0px;margin:0px;padding-bottom: 
 .txt_lista{background-color: transparent;width: 98%;border:none;}
 .txt_lista:focus{background-color: #c6e9ce;}
 .validacoes p{padding:4px;padding-left:25px;background-color:#f0ff8c;background-image: url('../imgs/icon_alerta.png');background-repeat: no-repeat;opacity: 0.8}
+.painel {margin-top: 60px;} 
